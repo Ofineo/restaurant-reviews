@@ -1,6 +1,13 @@
 @charset "utf-8";
 /* CSS Document */
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
@@ -15,12 +22,14 @@ img{
 /* ====================== Navigation ====================== */
 nav{
   height: 80px;
+  width: 100%;
+  background-color: rgb(54, 53, 53);
   margin: 0;
+  text-align:center;
 }
 
 .nav-link{
   margin: auto;
-  text-align:center;
   text-transform: uppercase;
   font-size: 2em;
   font-weight: 200;
@@ -28,6 +37,9 @@ nav{
   line-height: 110%;
   padding: 0%;
   color: #fff;
+  text-decoration: none;
+  position: relative;
+  top: 30%;  
 }
 
 .nav-link:hover{
@@ -127,8 +139,6 @@ nav{
   padding: 15px 20px 25px;
   text-align: left;
   border-radius: 35px 50px;
-  margin: 10px 0px;
- 
 }
 
 #restaurants-list .restaurant-img {
@@ -153,7 +163,8 @@ nav{
   margin-top: 20px;
   background-color: #ccc;
   width: 100%;
-  height: 52vw;
+  min-width: 450px;
+  height: 45vw;
   min-height: 550px !important;
 }
 

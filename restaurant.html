@@ -4,9 +4,8 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Restaurant Info</title>
 </head>
@@ -15,7 +14,7 @@
 
   <!-- Beginning nav -->
   <header>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="fixbox">
       <a class="nav-link" href="/">Restaurant Reviews</a>
     </nav>
   </header>
@@ -24,10 +23,10 @@
 
 
   <!-- Beginning main -->
-  <main class="container-fluid" id="maincontent">
+  <main class="container" id="maincontent">
     <!-- Beginning breadcrumb -->
-    <section class="row">
-      <ul class="col-sm-12 col-md-12" id="breadcrumb">
+    <section class="fixbox">
+      <ul id="breadcrumb">
         <li>
           <a href="/">Home</a>
         </li>
@@ -35,14 +34,14 @@
     </section>
     <!-- End breadcrumb -->
     <!-- Beginning map -->
-    <section class="row">
+    <section class="container fixbox">
       <!-- Beginning restaurant -->
-      <div class="col-sm-12 col-md-6 order-sm-1 order-md-2" id="map-container">
+      <div class="flexbox-half" id="map-container">
         <div id="map">
         </div>
       </div>
       <!-- End map -->
-      <section class="col-sm-12 col-md-6 order-sm-2 order-md-1" id="restaurant-container">
+      <section class="flexbox-half" id="restaurant-container">
         <h1 id="restaurant-name"></h1>
         <img id="restaurant-img">
         <p id="restaurant-cuisine"></p>
@@ -50,15 +49,15 @@
         <table id="restaurant-hours"></table>
       </section>
     </section>
-    
-    <div class="row">
-      <!-- end restaurant -->
-      <!-- Beginning reviews -->
-      <section class="col-sm-12" id="reviews-container">
-        <ul id="reviews-list"></ul>
-        <!-- End reviews -->
-      </section>
-    </div>
+
+
+    <!-- end restaurant -->
+    <!-- Beginning reviews -->
+    <section class="fixbox" id="reviews-container">
+      <ul id="reviews-list"></ul>
+      <!-- End reviews -->
+    </section>
+
 
 
   </main>

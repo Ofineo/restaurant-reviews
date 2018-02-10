@@ -137,11 +137,11 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
-  li.setAttribute('class','col-sm-12 col-md-4');
+  li.setAttribute('class','flexbox');
 
 
   const image = document.createElement('img');
-  image.className = 'img-fluid restaurant-img';
+  image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 

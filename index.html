@@ -4,28 +4,26 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Restaurant Reviews</title>
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="fixbox">
       <a class="nav-link" href="/">Restaurant Reviews</a>
     </nav>
   </header>
 
   <main id="maincontent">
-    <section class="container-fluid" id="map-container">
-      <div class="row">
-        <div class="col-sm-12" id="map"></div>
-      </div>
+    <section id="map-container">
+        <div class="fixbox" id="map"></div>
+     
 
-      <div class="row filter-options">
-        <div class="col-sm-12">
+      <div class="filter-options">
+        <div class="fixbox">
           <h2>Filter Results</h2>
           <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
             <option value="all">All Neighborhoods</option>
@@ -37,8 +35,8 @@
       </div>
     </section>
 
-    <section class="container-fluid">
-      <ul class="row" id="restaurants-list"></ul>
+    <section class="container">
+      <ul class="container fixbox" id="restaurants-list"></ul>
     </section>
   </main>
 
