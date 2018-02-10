@@ -6,12 +6,30 @@
     flex-wrap: wrap;
 }
 
+/* Smaller devices (350px and up)*/
+@media (min-width: 350px) {
+    .flexbox{
+        width: 100%;
+    }
+    .flexbox-half{
+        width: 100%;
+    }
+    .fixbox{
+        width: 100%;
+    }
+    div#map-container.flexbox-half{order:1}
+    section#restaurant-container.flexbox-half{order:2}
+}
+
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
     .flexbox{
         width: 100%;
     }
     .flexbox-half{
+        width: 100%;
+    }
+    .fixbox{
         width: 100%;
     }
     div#map-container.flexbox-half{order:1}
