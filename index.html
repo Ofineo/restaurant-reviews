@@ -13,33 +13,33 @@
 
 <body>
   <header>
-    <nav>
-      <h1>
-        <a href="/">Restaurant Reviews</a>
-      </h1>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="nav-link" href="/">Restaurant Reviews</a>
     </nav>
   </header>
 
   <main id="maincontent">
-    <section id="map-container">
-      <div id="map"></div>
-    </section>
-    <section>
-      <div class="filter-options">
-        <h2>Filter Results</h2>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
-          <option value="all">All Neighborhoods</option>
-        </select>
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
-          <option value="all">All Cuisines</option>
-        </select>
+    <section class="container-fluid" id="map-container">
+      <div class="row">
+        <div class="col-sm-12" id="map"></div>
+      </div>
+
+      <div class="row filter-options">
+        <div class="col-sm-12">
+          <h2>Filter Results</h2>
+          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+            <option value="all">All Neighborhoods</option>
+          </select>
+          <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+            <option value="all">All Cuisines</option>
+          </select>
+        </div>
       </div>
     </section>
+
     <section class="container-fluid">
       <ul class="row" id="restaurants-list"></ul>
-
     </section>
-
   </main>
 
   <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
