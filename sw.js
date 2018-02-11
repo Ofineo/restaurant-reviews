@@ -29,11 +29,27 @@ self.addEventListener('install', event => {
     );
 });
 
-self.addEventListener('fetch', event=> {
-    console.log('this is the event',event);
-    event.respondWith(        
+self.addEventListener('activate', function (event) {
+    event.waitUntil(
+        caches.keys().then(function (cacheNames) {
+            return Promise.all(
+                cacheNames.filter(function (cacheName) {
+                    return cacheName.startsWith('restaurant-reviews-') &&
+                        cacheName != staticCacheName;
+                }).map(function (cacheName) {
+                    return caches.delete(cacheName);
+                })
+            );
+        })
+    );
+});
+
+self.addEventListener('fetch', event => {
+    console.log('this is the event', event);
+    event.respondWith(
         caches.match(event.request).then(function (response) {
             return response || fetch(event.request);
         })
     );
 });
+
