@@ -160,11 +160,15 @@ nav{
 }
 
 /* ====================== Restaurant Details ====================== */
+section#map-container{
+  padding: 5px;
+}
+
 .inside #map {
   margin-top: 20px;
   background-color: #ccc;
   width: 100%;
-  min-width: 300px;
+  min-width: 280px;
   height: 45vw;
   min-height: 550px !important;
 }
