@@ -23,14 +23,14 @@
     <!-- Beginning breadcrumb -->
     <section class="fixbox">
       <ul id="breadcrumb">
-        <li>
+        <li aria-labelledby="breadcrumb">
           <a href="/">Home</a>
         </li>
       </ul>
     </section>
     <!-- End breadcrumb -->
     <!-- Beginning map -->
-    <section class="container fixbox">
+    <article class="container fixbox">
       <div class="flexbox-half" id="map-container">
         <div id="map">
         </div>
@@ -41,13 +41,15 @@
         <h1 id="restaurant-name"></h1>
         <img id="restaurant-img">
         <p id="restaurant-cuisine"></p>
-        <p id="restaurant-address"></p>
-        <table id="restaurant-hours"></table>
+        <p id="restaurant-address" tabindex="0"></p>
+        <table id="restaurant-hours" tabindex="0">
+          <caption>Opening Hours:</caption>
+        </table>  
       </section>
-    </section>
+    </article>
     <!-- end restaurant -->
     <!-- Beginning reviews -->
-    <section class="fixbox" id="reviews-container">
+<section class="fixbox" id="reviews-container"  tabindex="0" aria-label="restaurants reviews">
       <ul id="reviews-list"></ul>
       <!-- End reviews -->
     </section>
@@ -70,4 +72,5 @@
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_tKbW6A5pQ-eupxI56myUnHLqYCzOjKo&libraries=places&callback=initMap"></script>
   <!-- End scripts -->
 </body>
+
 </html>

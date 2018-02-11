@@ -18,23 +18,23 @@
   </header>
 
   <main id="maincontent">
-    <section id="map-container">
+    <section id="map-container" >
       <div class="fixbox" id="map"></div>
 
       <div class="filter-options">
         <div class="fixbox">
-          <h2>Filter Results</h2>
-          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+          <h2 id="filter">Filter Results</h2>
+          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-labelledby="filter">
             <option value="all">All Neighborhoods</option>
           </select>
-          <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+          <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-labelledby="filter">
             <option value="all">All Cuisines</option>
           </select>
         </div>
       </div>
     </section>
 
-    <section class="container">
+    <section class="container" tabindex="0" aria-describedby="restaurants">
       <ul class="container fixbox" id="restaurants-list"></ul>
     </section>
   </main>

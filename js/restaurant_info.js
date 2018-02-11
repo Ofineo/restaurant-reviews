@@ -50,6 +50,7 @@ fetchRestaurantFromURL = (callback) => {
  */
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
+  name.setAttribute('tabindex','0');
   name.innerHTML = restaurant.name;
 
   const address = document.getElementById('restaurant-address');
@@ -57,6 +58,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const image = document.getElementById('restaurant-img');
   image.setAttribute('alt', restaurant.alt);
+  image.setAttribute('tabindex','0')
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
   const cuisine = document.getElementById('restaurant-cuisine');
@@ -77,6 +79,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
   const hours = document.getElementById('restaurant-hours');
   for (let key in operatingHours) {
     const row = document.createElement('tr');
+    row.setAttribute('aria-labelledby','restaurant-hours')
 
     const day = document.createElement('td');
     day.innerHTML = key;
@@ -106,8 +109,8 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
     return;
   }
   const ul = document.getElementById('reviews-list');
-  reviews.forEach(review => {
-    ul.appendChild(createReviewHTML(review));
+  reviews.forEach((review, index) => {
+    ul.appendChild(createReviewHTML(review, index));
   });
   container.appendChild(ul);
 }
@@ -115,13 +118,14 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 /**
  * Create review HTML and add it to the webpage.
  */
-createReviewHTML = (review) => {
+createReviewHTML = (review, index) => {
   const li = document.createElement('li');
   const name = document.createElement('p');
   name.setAttribute('class','dark-highlight')
   name.innerHTML = review.name;
   li.appendChild(name);
-
+  li.setAttribute('tabindex','0');
+  
   const date = document.createElement('p');
   date.innerHTML = review.date;
   li.appendChild(date);

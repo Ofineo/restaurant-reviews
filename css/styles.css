@@ -202,6 +202,12 @@ nav{
   color: #666;
 }
 
+caption{
+  text-align: left;
+  padding-bottom: 2px;
+  font-weight: bold;
+}
+
 /* ====================== Restaurant Details ====================== */
 #reviews-container {
   border-top: 1px solid #d9d9d9;
@@ -217,7 +223,8 @@ ul#reviews-list{
   font-size: 2.5em;
   font-weight: 300;
   letter-spacing: -1px;
-  padding: 30px 40px 80px;
+  padding: 0 20px 0;
+  margin: 5px;
 }
 
 .orange-highlight{
