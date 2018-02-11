@@ -21,20 +21,20 @@
   <!-- Beginning main -->
   <main class="container" id="maincontent">
     <!-- Beginning breadcrumb -->
-    <section class="fixbox">
+    <aside class="fixbox">
       <ul id="breadcrumb">
         <li aria-labelledby="breadcrumb">
-          <a href="/">Home</a>
+          <a tabindex="-1" href="/">Home</a>
         </li>
       </ul>
-    </section>
+    </aside>
     <!-- End breadcrumb -->
     <!-- Beginning map -->
     <article class="container fixbox">
-      <div class="flexbox-half" id="map-container">
+      <section class="flexbox-half" id="map-container">
         <div id="map">
         </div>
-      </div>
+      </section>
       <!-- End map -->
       <!-- Beginning restaurant -->
       <section class="flexbox-half" id="restaurant-container">
@@ -44,12 +44,12 @@
         <p id="restaurant-address" tabindex="0"></p>
         <table id="restaurant-hours" tabindex="0">
           <caption>Opening Hours:</caption>
-        </table>  
+        </table>
       </section>
     </article>
     <!-- end restaurant -->
     <!-- Beginning reviews -->
-<section class="fixbox" id="reviews-container"  tabindex="0" aria-label="restaurants reviews">
+    <section class="fixbox" id="reviews-container" tabindex="0" aria-label="restaurants reviews">
       <ul id="reviews-list"></ul>
       <!-- End reviews -->
     </section>

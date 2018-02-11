@@ -14,6 +14,12 @@ window.initMap = () => {
         center: restaurant.latlng,
         scrollwheel: false
       });
+      /*Remove tabindex from anchor tags in map. Code from https://jsfiddle.net/xiondark2008/46xeu7gq/*/
+      google.maps.event.addListener(self.map, "tilesloaded", function () {
+        [].slice.apply(document.querySelectorAll('#map a')).forEach(function (item) {
+          item.setAttribute('tabindex', '-1');
+        });
+      })
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
     }
@@ -50,7 +56,7 @@ fetchRestaurantFromURL = (callback) => {
  */
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
-  name.setAttribute('tabindex','0');
+  name.setAttribute('tabindex', '0');
   name.innerHTML = restaurant.name;
 
   const address = document.getElementById('restaurant-address');
@@ -58,7 +64,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const image = document.getElementById('restaurant-img');
   image.setAttribute('alt', restaurant.alt);
-  image.setAttribute('tabindex','0')
+  image.setAttribute('tabindex', '0')
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
   const cuisine = document.getElementById('restaurant-cuisine');
@@ -79,7 +85,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
   const hours = document.getElementById('restaurant-hours');
   for (let key in operatingHours) {
     const row = document.createElement('tr');
-    row.setAttribute('aria-labelledby','restaurant-hours')
+    row.setAttribute('aria-labelledby', 'restaurant-hours')
 
     const day = document.createElement('td');
     day.innerHTML = key;
@@ -121,23 +127,23 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 createReviewHTML = (review, index) => {
   const li = document.createElement('li');
   const name = document.createElement('p');
-  name.setAttribute('class','dark-highlight')
+  name.setAttribute('class', 'dark-highlight')
   name.innerHTML = review.name;
   li.appendChild(name);
-  li.setAttribute('tabindex','0');
-  
+  li.setAttribute('tabindex', '0');
+
   const date = document.createElement('p');
   date.innerHTML = review.date;
   li.appendChild(date);
 
   const rating = document.createElement('span');
   rating.innerHTML = `Rating: ${review.rating}`;
-  rating.setAttribute('class','orange-highlight')
+  rating.setAttribute('class', 'orange-highlight')
   li.appendChild(rating);
 
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
-  comments.setAttribute('class','text-padding')
+  comments.setAttribute('class', 'text-padding')
   li.appendChild(comments);
 
   return li;
@@ -146,7 +152,7 @@ createReviewHTML = (review, index) => {
 /**
  * Add restaurant name to the breadcrumb navigation menu
  */
-fillBreadcrumb = (restaurant=self.restaurant) => {
+fillBreadcrumb = (restaurant = self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
   li.innerHTML = restaurant.name;

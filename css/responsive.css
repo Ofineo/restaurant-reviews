@@ -17,7 +17,7 @@
     .fixbox{
         width: 100%;
     }
-    div#map-container.flexbox-half{order:1}
+    section#map-container.flexbox-half{order:1}
     section#restaurant-container.flexbox-half{order:2}
 }
 
@@ -32,7 +32,7 @@
     .fixbox{
         width: 100%;
     }
-    div#map-container.flexbox-half{order:1}
+    section#map-container.flexbox-half{order:1}
     section#restaurant-container.flexbox-half{order:2}
 }
 
@@ -47,7 +47,7 @@
     .flexbox-half{
         width: 50%;
     }
-    div#map-container.flexbox-half{order:2}
+    section#map-container.flexbox-half{order:2}
     section#restaurant-container.flexbox-half{order:1}
 }
 

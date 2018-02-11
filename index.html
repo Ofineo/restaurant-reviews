@@ -18,10 +18,10 @@
   </header>
 
   <main id="maincontent">
-    <section id="map-container" >
-      <div class="fixbox" id="map"></div>
+    <article id="map-container">
+      <section class="fixbox" id="map"></section>
 
-      <div class="filter-options">
+      <aside class="filter-options">
         <div class="fixbox">
           <h2 id="filter">Filter Results</h2>
           <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-labelledby="filter">
@@ -31,12 +31,12 @@
             <option value="all">All Cuisines</option>
           </select>
         </div>
-      </div>
-    </section>
+      </aside>
+    </article>
 
-    <section class="container" tabindex="0" aria-describedby="restaurants">
+    <article class="container" tabindex="0" aria-describedby="restaurants">
       <ul class="container fixbox" id="restaurants-list"></ul>
-    </section>
+    </article>
   </main>
 
   <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>

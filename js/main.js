@@ -80,6 +80,12 @@ window.initMap = () => {
     center: loc,
     scrollwheel: false
   });
+  /*Remove tabindex from anchor tags in map. Code from https://jsfiddle.net/xiondark2008/46xeu7gq/*/
+  google.maps.event.addListener(self.map, "tilesloaded", function () {
+    [].slice.apply(document.querySelectorAll('#map a')).forEach(function (item) {
+      item.setAttribute('tabindex', '-1');
+    });
+  })
   updateRestaurants();
 }
 
@@ -137,19 +143,19 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
-  li.setAttribute('class','flexbox');
+  li.setAttribute('class', 'flexbox');
 
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
-  image.setAttribute('alt',restaurant.alt);
-  image.setAttribute('tabindex','0');
+  image.setAttribute('alt', restaurant.alt);
+  image.setAttribute('tabindex', '0');
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
-  name.setAttribute('tabindex','0');
+  name.setAttribute('tabindex', '0');
   li.append(name);
 
   const neighborhood = document.createElement('p');
