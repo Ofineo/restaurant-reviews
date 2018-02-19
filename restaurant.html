@@ -16,21 +16,22 @@
     <nav class="fixbox">
       <a class="nav-link" href="/">Restaurant Reviews</a>
     </nav>
-  </header>
-  <!-- End nav -->
-  <!-- Beginning main -->
-  <main class="container" id="maincontent">
-    <!-- Beginning breadcrumb -->
-    <aside class="fixbox">
+    <aside aria-label="breadcrumb" role="navigation" class="fixbox">
       <ul id="breadcrumb">
         <li aria-labelledby="breadcrumb">
-          <a tabindex="-1" href="/">Home</a>
+          <a href="/">Home</a>
         </li>
       </ul>
     </aside>
+  </header>
+  <!-- End nav -->
+  <!-- Beginning main -->
+  <main role="main" class="container" id="maincontent">
+    <!-- Beginning breadcrumb -->
+    
     <!-- End breadcrumb -->
     <!-- Beginning map -->
-    <article class="container fixbox">
+    <article role="presentation" aria-hidden="true" class="container fixbox">
       <section class="flexbox-half" id="map-container">
         <div id="map">
         </div>
