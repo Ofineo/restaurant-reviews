@@ -12,28 +12,26 @@
 
 <body class="inside">
   <!-- Beginning nav -->
-  <header>
-    <nav class="fixbox">
-      <a class="nav-link" href="/">Restaurant Reviews</a>
-    </nav>
-    <aside aria-label="breadcrumb" role="navigation" class="fixbox">
-      <ul id="breadcrumb">
-        <li aria-labelledby="breadcrumb">
-          <a href="/">Home</a>
-        </li>
-      </ul>
-    </aside>
+  <header class="fixbox">
+    <a class="restaurant-link" href="/">Restaurant Reviews</a>
   </header>
+  <nav aria-label="breadcrumb" role="navigation" class="fixbox">
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+    </ul>
+  </nav>
   <!-- End nav -->
   <!-- Beginning main -->
   <main role="main" class="container" id="maincontent">
     <!-- Beginning breadcrumb -->
-    
+
     <!-- End breadcrumb -->
     <!-- Beginning map -->
-    <article role="presentation" aria-hidden="true" class="container fixbox">
+    <article class="container fixbox">
       <section class="flexbox-half" id="map-container">
-        <div id="map">
+        <div role="application" id="map">
         </div>
       </section>
       <!-- End map -->

@@ -20,7 +20,7 @@ img{
 }
 
 /* ====================== Navigation ====================== */
-nav{
+header{
   height: 80px;
   width: 100%;
   background-color: rgb(54, 53, 53);
@@ -28,7 +28,7 @@ nav{
   text-align:center;
 }
 
-.nav-link{
+.restaurant-link{
   margin: auto;
   text-transform: uppercase;
   font-size: 2em;
