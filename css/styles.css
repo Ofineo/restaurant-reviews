@@ -13,6 +13,7 @@ body{
 	font-size: 10pt;
 	color: #333;
   background-color: #fdfdfd;	
+  margin: 0;
 }
 
 img{
@@ -146,7 +147,7 @@ header{
   border-radius: 50px 15px;
 }
 
-#restaurants-list li h1 {
+#restaurants-list li h2 {
   color: #f18200;
   font-size: 1.5em;
   font-weight: 500;
@@ -157,6 +158,16 @@ header{
 #restaurants-list p {
   margin: 0;
   font-size: 1em;
+}
+
+.details-button{
+  background-color: #545353;  
+  border-radius: 5px;
+  color: white;
+  padding: .3em;
+  text-decoration: none;
+  position: relative;
+  top: 0.7em;
 }
 
 /* ====================== Restaurant Details ====================== */
