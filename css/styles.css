@@ -176,11 +176,11 @@ section#map-container{
 }
 
 .inside #map {
-  margin-top: 20px;
+  margin-top: 65px;
   background-color: #ccc;
   width: 100%;
   min-width: 280px;
-  height: 45vw;
+  height: 38vw;
   min-height: 550px !important;
 }
 
@@ -221,6 +221,10 @@ caption{
   text-align: left;
   padding-bottom: 2px;
   font-weight: bold;
+}
+
+#restaurant-container{
+  padding-left: 0.2vw;
 }
 
 /* ====================== Restaurant Details ====================== */

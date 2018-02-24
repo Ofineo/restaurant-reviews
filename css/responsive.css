@@ -54,7 +54,7 @@
 /* Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) { 
   body{
-    max-width: 1200px;
+    /*max-width: 1200px;*/
     margin-left: auto;
     margin-right: auto; 
   }
